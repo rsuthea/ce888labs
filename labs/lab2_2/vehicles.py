@@ -22,7 +22,6 @@ def mad(arr):
 
 if __name__ == "__main__":
     df = pd.read_csv('./vehicles.csv')
-    print("############################################################################################################")
     print((df.columns))
     sns_plot = sns.lmplot(df.columns[0], df.columns[1], data=df, fit_reg=False)
 
@@ -33,7 +32,7 @@ if __name__ == "__main__":
     sns_plot.savefig("scaterplot.pdf", bbox_inches='tight')
 
     data = df.values.T[1]
-
+    print(" not enough values for 2nd column")
     print((("Mean: %f") % (np.mean(data))))
     print((("Median: %f") % (np.median(data))))
     print((("Var: %f") % (np.var(data))))
